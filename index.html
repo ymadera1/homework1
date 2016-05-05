@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<!-- bxSlider CSS file -->
+	<link href="jquery.bxslider.css" rel="stylesheet" />
+	
+
+	<script src="http://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="jquery.nav.js"></script>
+	<script type="text/javascript" src="lesson1.js"></script>
+
+	<!-- bxSlider Javascript file -->
+	<script src="jquery.bxslider.js"></script>
+	<script src="jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="/plugins/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="/plugins/jquery.fitvids.js"></script>
+	<script type="text/javascript" src="bower.json"></script>
+
+
+
+	<script>
+
+		$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
+
+
+		$(document).ready(function() {
+
+			var menu = $(".nav-wrapper nav");
+
+			$("#menu-icon").click(function() {
+
+				menu.slideToggle();
+			});
+
+
+
+
+			$(window).resize(function() {
+				var w = $(window).width();
+
+				if(w > 768 && menu.is(":hidden")) {
+					menu.removeAttr('style');
+				}
+			});
+		});
+	</script>
+
+	
+
+	<style>
+
+		body {
+			background-color: #595959;
+			color: white;
+		}
+
+		section {
+			height: 600px;			
+			padding-top: 38px;
+
+		}
+
+		.home-slider-wrapper {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 647px;
+		}
+
+		.nav-wrapper {
+			/*text-align: center;*/
+			/*background-color: pink;*/
+			/*position: fixed;*/
+			width: 100%;
+			top: 0px;
+			left: 20px;
+			list-style: none;
+			margin: 0px;
+		}
+
+		.nav-wrapper ul {
+			 margin: 0px;
+			 padding: 0px;
+			 position: absolute;
+			 z-index: 82;
+		}
+
+		.nav-wrapper li {
+			/*display: inline-block;*/
+			/*padding: 10px;*/
+			list-style: none;
+		}
+
+		.nav-wrapper a {
+			color: color: #248D8E;
+		}
+
+		.current a {
+			color: purple;
+			font-weight: 700px;
+		}
+
+		#menu-icon {
+			position: absolute;
+			top: 0;
+			right: 10px;
+			font-size: 32px;
+			padding-right: 10px;
+			cursor: pointer;
+			display: none;
+		}
+
+		section h1 {
+			text-align: center;
+		}
+
+		nav {
+			position: fixed;
+			left: 20px;
+			top: 20px;
+		}
+
+		nav li {
+			margin-bottom: 2px;
+		}
+
+		nav a {
+			background-color: #70D9DA;
+			display: block;
+			font-size: 12px;
+			padding: 18px 16px;
+			text-transform: uppercase;
+			color: #248D8E;
+			text-decoration: none;
+		}
+
+		nav .current a {
+			background-color: #248D8E;
+			color: #70D9DA;
+		}
+
+		@media (max-width: 768px) {
+
+			.nav-wrapper nav {
+				display: none;
+			}
+
+			.nav-wrapper ul {
+				position: static;
+			}
+
+			.nav-wrapper li {
+				display: block;
+			}
+			
+			#menu-icon{
+				display: block;
+			}
+
+			nav {
+				position: static;
+			}
+
+
+
+		}
+
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="nav-wrapper">
+			<div id="menu-icon">&#9776;</div>
+			<nav>
+				<ul>
+					<li class="current"><a href="#landscapes">Landscapes</a></li>
+					<li><a href="#objects">Objects</a></li>
+					<li><a href="#portraits">Portaits</a></li>
+					<li><a href="#desserts">Desserts</a></li>
+				</ul>
+				
+			</nav>
+		</div>
+
+		<div>
+			<div>
+
+				<section id="landscapes">
+					<h1>Landscapes</h1>
+					<div class="home-slider-wrapper">
+						<ul class="bxslider">
+						  <li><img src="images/a_dreamy_world_17.jpg" /></li>
+						  <li><img src="images/A_Dreamy_World_88th_by_grafixeye.jpg" /></li>
+						  <li><img src="images/thumbbig-78661.jpg" /></li>
+						  <li><img src="images/mountains.jpg" /></li>
+						</ul>
+					</div>
+				</section>
+
+				<section id="objects">
+					<h1>Objects<a style="color: white; text-decoration: none; text-align: right;" href="#">&#8682;</a></h1>
+					<div class="home-slider-wrapper">
+						<ul class="bxslider">
+						  <li><img src="images/cracked_lightbulb.jpg" /></li>
+						  <li><img src="images/pencils.jpg" /></li>
+						  <li><img src="images/spoon.jpg" /></li>
+						  <li><img src="images/wine_opener.jpg" /></li>
+						</ul>
+					</div>
+				</section>
+				<section id="portraits">
+					<h1>Portraits<a style="color: white; text-decoration: none; text-align: right;" href="#">&#8682;</a></h1>
+					<div class="home-slider-wrapper">
+						<ul class="bxslider">
+						  <li><img src="images/girl.jpg" /></li>
+						  <li><img src="images/girl2.jpg" /></li>
+						  <li><img src="images/guy.jpg" /></li>
+						  <li><img src="images/man.jpg" /></li>
+						</ul>
+					</div>
+				</section>
+				<section id="desserts">
+					<h1>Desserts<a style="color: white; text-decoration: none; text-align: right;" href="#">&#8682;</a></h1>
+					<div class="home-slider-wrapper">
+						<ul class="bxslider">
+						  <li><img src="images/cookies.jpg" /></li>
+						  <li><img src="images/chocolate.jpg" /></li>
+						  <li><img src="images/pie.jpg" /></li>
+						  <li><img src="images/brownie.jpg" /></li>
+						</ul>
+					</div>
+				</section>
+			</di>
+		</div>
+	</div>
+
+
+</body>
+</html>
